@@ -3,7 +3,9 @@ const exphbs = require("express-handlebars");
 const mysql = require("mysql");
 const app = express();
 
-const routes = require("./controllers/burgersController.js");
+const routes = require("./controllers/burgers_controllers.js");
+
+var PORT = process.env.PORT || 8000;
 
 app.use(express.static("public"));
 
