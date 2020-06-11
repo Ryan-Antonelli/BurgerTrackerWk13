@@ -16,7 +16,7 @@ var orm = {
     },
 
     insertOne: function() {
-        var query = "INSERT INTO burgers (burger_name, devoured)
+        var query = "INSERT INTO burgers" ("burgerName", "devoured")
         VALUES (req.body.burger, "FALSE");
 
         connection.query(query, function(err, res) {
@@ -26,7 +26,7 @@ var orm = {
     },
 
     updateOne: function() {
-        var query = `UPDATE burgers SET burger_name = ${req.body.burger} [WHERE id = ${req.body.id}]`
+        var query = `UPDATE burgers SET burgerName = ${req.body.burger} [WHERE id = ${req.body.id}]`
 
         connection.query(query, function(err, res) {
             if (err) throw err;

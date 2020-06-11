@@ -4,14 +4,14 @@ CREATE DATABASE burgers_db;
 
 USE burgers_db;
 
-CREATE TABLE `burgers` (
-    `id` INT AUTO_INCREMENT NOT NULL,
-    `burger_name` VARCHAR(100) NOT NULL,
-    `devoured` BOOLEAN,
+CREATE TABLE burgers (
+    id INT AUTO_INCREMENT NOT NULL,
+    burgerName VARCHAR(100) NOT NULL,
+    devoured BOOLEAN DEFAULT FALSE,
     PRIMARY KEY(id)
 );
 
-INSERT INTO `burgers` (`burger_name`, `devoured`)
+INSERT INTO burgers (burgerName, devoured)
 VALUES 
 ("The Murderer", false),
 ("Rancid Meaty", false),
